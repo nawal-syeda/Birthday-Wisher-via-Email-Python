@@ -34,7 +34,7 @@ for index, rec in recs.iterrows():
         connection.starttls()
         connection.login(MY_EMAIL, PASSWORD)
         connection.sendmail(from_addr=MY_EMAIL,to_addrs=rec['email'],msg = f"Subject: Happy Birthday!\n\n{updated_letter}")
-
+    ##testing sync of local and remote
 
 
 
