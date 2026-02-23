@@ -32,7 +32,7 @@ for index, rec in recs.iterrows():
     #4. Send the letter generated in step 3 to that person's email address.
     with smtplib.SMTP('smtp.gmail.com', 587) as connection:
         connection.starttls()
-        connection.login(MY_EMAIL, PASSWORD)
+        connection.login(MY_EMAIL, MY_PASSWORD)
         connection.sendmail(from_addr=MY_EMAIL,to_addrs=rec['email'],msg = f"Subject: Happy Birthday!\n\n{updated_letter}")
     ##testing sync of local and remote
 
